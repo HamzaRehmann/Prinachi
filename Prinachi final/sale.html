@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sale</title>
+    <style>
+        .logo-navbar {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+        .logo-navbar a {
+            text-decoration: none;
+            color: #030202;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo-navbar">
+            <a href="index.html">PRINACHI</a>
+        </div>
+        <div class="middle-navbar">
+            <a class="nav-button" href="index.html">Home</a>
+            <a class="nav-button" href="men.html">Men</a>
+            <a class="nav-button" href="women.html">Women</a>
+            <a class="nav-button" href="kids.html">Kids</a>
+            <a class="nav-button" href="sale.html">Sale</a>
+        </div>
+        <div class="right-navbar">
+          <a class="nav-button" href="login.html"><img src="pictures/login.png" alt="Login" style="width: 15px; height: 15px; margin-right: 5px; filter: invert(100%);">Login</a>
+          <a class="nav-button" href="cart.html"><img src="pictures/cart.png" alt="Cart" style="width: 15px; height: 15px; margin-right: 5px; filter: invert(100%);">Cart</a>
+          <a id="darkModeButton" class="nav-button" href="#"><img src="pictures/dark-mode.png" alt="Dark-Mode" style="width: 15px; height: 15px; margin-right: 5px; filter: invert(100%);">Dark-Mode</a>
+        </div>
+    </div>
+
+    <div class="product-cards">
+        <div class="card" id="product21">
+            <img src="pictures/vneck.jpg" alt="V-Neck T-Shirt" style="width:100%" class="productPicture">
+            <h1 class="productTitle">V-Neck T-Shirt</h1>
+            <p class="productPrice"><s>$39.99</s> <b>$24.99</b></p>
+            <p>V-Neck white t-shirt!</p>
+            <p><button onclick="cartUtils.addToCart('product21')">Add to Cart</button></p>
+        </div>
+
+        <div class="card" id="product22">
+            <img src="pictures/tuxedo.jpg" alt="Tuxedo" style="width:100%" class="productPicture">
+            <h1 class="productTitle">Tuxedo</h1>
+            <p class="productPrice"><s>$289.99</s> <b>$174.99</b></p>
+            <p>Luxury Tux!</p>
+            <p><button onclick="cartUtils.addToCart('product22')">Add to Cart</button></p>
+        </div>
+
+        <div class="card" id="product23">
+            <img src="pictures/christmassweater.jpg" alt="Chrismtas Sweater" style="width:100%" class="productPicture">
+            <h1 class="productTitle">Christmas Sweater</h1>
+            <p class="productPrice"><s>$79.99</s> <b>$39.99</b></p>
+            <p>Christmas sweater for everyone!</p>
+            <p><button onclick="cartUtils.addToCart('product23')">Add to Cart</button></p>
+        </div>
+
+        <div class="card" id="product24">
+            <img src="pictures/jeanjacket.jpg" alt="Denim Jacket" style="width:100%" class="productPicture">
+            <h1 class="productTitle">Denim Jacket</h1>
+            <p class="productPrice"><s>$129.99</s> <b>$65.99</b></p>
+            <p>Denim jacket for women!</p>
+            <p><button onclick="cartUtils.addToCart('product24')">Add to Cart</button></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-content">
+                <div class="footer-group">
+                    <p class="bold">Can we help you?</p>
+                    <p>Send E-mail</p>
+                    <p>contactus@prinachi.com</p>
+                    <p>UAN: 000 000-00-1111</p>
+                </div>
+                <div class="footer-group">
+                    <p>Help</p>
+                    <p>FAQ</p>
+                    <p>Log In / Sign Up</p>
+                    <p>How to pay</p>
+                </div>
+                <div class="footer-group">
+                    <p>About Us</p>
+                    <p>About Prinachi</p>
+                    <p>Contact Us</p>
+                    <p>Support Us</p>
+                </div>
+                <div class="footer-group payment-methods">
+                    <p>Payment Methods</p>
+                    <p></p>
+                    <div class="payment-icons">
+                        <img src="pictures/visa.png" alt="Visa">
+                        <img src="pictures/mastercard.png" alt="Mastercard">
+                    </div>
+                </div>
+            </div>
+            <div class="rowtwo">
+                <ul class="footer-list">
+                    <li class="listpoint"><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li class="listpoint"><a href="terms.html">Terms of Service</a></li>
+                    <li class="listpoint"><a href="#">Contact Us</a></li>
+                </ul>
+                <div class="copyright">
+                    <p>&copy; 2024 Prinachi. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="addToCart.js"></script>
+    <script>
+        const addToCart = (event) => {
+            console.log(event.target.parentNode.parentNode);
+            console.log("hello");
+
+        }
+    </script>
+</body>
+</html>
